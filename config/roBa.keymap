@@ -49,6 +49,27 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        PCPW: PCPW {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(D) &kp N &kp A &kp W &kp O &kp D &kp E &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3>;
+            label = "PCPW";
+        };
+
+        wmadmin: wmadmin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END) &kp W &kp M &kp A &kp D &kp M &kp I &kp N &kp TAB &kp W &kp I &kp S &kp M &kp E &kp T &kp T &kp A &kp C &kp N1 &kp ENTER>;
+            label = "WMADMIN";
+        };
+
+        DevQAProd: DevQAProd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END) &kp J &kp I &kp Z &kp H &kp O &kp U &kp TAB &kp LS(D) &kp N &kp A &kp W &kp O &kp D &kp E &kp AT &kp N1 &kp N2 &kp N3 &kp ENTER>;
+            label = "DEVQAPROD";
+        };
     };
 
     behaviors {
