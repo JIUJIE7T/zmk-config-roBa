@@ -89,7 +89,7 @@
         default_layer {
             bindings = <
 &kp Q      &kp W         &kp E          &kp R       &kp T                                                    &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D          &kp F       &kp G        &kp EQUAL                 &kp SINGLE_QUOTE  &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp A      &kp S         &kp D          &kp F       &kp G        &mkp MB3                  &kp SINGLE_QUOTE  &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &kp Z      &kp X         &kp C          &kp V       &kp B        &lt 5 LA(GRAVE)           &kp DELETE        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL  &kp LEFT_WIN  &kp RIGHT_ALT  &kp LSHIFT  &lt 1 SPACE  &lt_to_layer_0 3 TAB      &kp BACKSPACE     &lt 2 ENTER                             &kp ESCAPE
             >;
@@ -99,11 +99,13 @@
 
         FUNCTION {
             bindings = <
-&kp NUMBER_1    &kp NUMBER_2          &kp NUMBER_3         &kp NUMBER_4          &kp NUMBER_5                               &kp NUMBER_6   &kp N7     &kp N8        &kp N9     &kp N0
-&kp LEFT_SHIFT  &kp LEFT_PARENTHESIS  &kp RPAR             &kp MINUS             &kp EQUAL     &kp HOME      &kp PAGE_UP    &kp INSERT     &mkp LCLK  &kp UP_ARROW  &mkp RCLK  &kp SQT
-&kp CAPSLOCK    &kp LS(LEFT_BRACE)    &kp LS(RIGHT_BRACE)  &kp NON_US_BACKSLASH  &kp GRAVE     &kp END       &kp PAGE_DOWN  &kp DELETE     &kp LEFT   &kp DOWN      &kp RIGHT  &kp SEMICOLON
-&kp ESC         &kp LEFT_BRACKET      &kp RIGHT_BRACKET    &kp LS(LC(X))         &trans        &trans        &kp LEFT_WIN   &kp LA(GRAVE)                                      &trans
+&kp NUMBER_1    &kp NUMBER_2          &kp NUMBER_3         &kp NUMBER_4          &kp NUMBER_5                              &kp NUMBER_6   &kp N7     &kp N8        &kp N9     &kp N0
+&kp LEFT_SHIFT  &kp LEFT_PARENTHESIS  &kp RPAR             &kp MINUS             &kp EQUAL     &kp HOME      &kp HOME      &kp INSERT     &mkp LCLK  &kp UP_ARROW  &mkp RCLK  &kp SQT
+&kp CAPSLOCK    &kp LS(LEFT_BRACE)    &kp LS(RIGHT_BRACE)  &kp NON_US_BACKSLASH  &kp GRAVE     &kp END       &kp END       &kp DELETE     &kp LEFT   &kp DOWN      &kp RIGHT  &kp SEMICOLON
+&kp ESC         &kp LEFT_BRACKET      &kp RIGHT_BRACKET    &kp LS(LC(X))         &trans        &trans        &kp LEFT_WIN  &kp LA(GRAVE)                                      &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LG(LS(SPACE)) LG(SPACE)>;
         };
 
         NUM {
@@ -113,6 +115,8 @@
 &kp F11  &kp F12   &trans   &trans     &trans         &kp EQUAL                    &kp ASTERISK  &kp SLASH  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER
 &trans   &kp HOME  &kp END  &kp LCTRL  &kp RIGHT_WIN  &kp RIGHT_ALT                &trans        &trans                                                        &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         ARROW {
@@ -123,7 +127,7 @@
 &trans      &trans           &trans          &trans                   &trans             &trans                 &trans   &trans                                                   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         MOUSE {
