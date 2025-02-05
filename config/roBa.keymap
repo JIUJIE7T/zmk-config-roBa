@@ -24,7 +24,7 @@ scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             bindings = <&msc SCRL_DOWN>,<&msc SCRL_UP>;
             tap-ms = <20>;
         };
-    }
+    };
     combos {
         compatible = "zmk,combos";
 
