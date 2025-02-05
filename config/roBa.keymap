@@ -8,14 +8,7 @@
 #define SCROLL 3
 #define NUM 6
 
-scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>,<&msc SCRL_UP>;
-            tap-ms = <20>;
-        };
 
-sensor-bindings = <&scroll_up_down>;
 
 &mt {
     flavor = "balanced";
@@ -157,3 +150,12 @@ sensor-bindings = <&scroll_up_down>;
         };
     };
 };
+
+behaviors {
+scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>,<&msc SCRL_UP>;
+            tap-ms = <20>;
+        };
+}
