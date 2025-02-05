@@ -16,7 +16,15 @@
     quick-tap-ms = <0>;
 };
 
-/ {
+/ {    
+    behaviors {
+scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>,<&msc SCRL_UP>;
+            tap-ms = <20>;
+        };
+    }
     combos {
         compatible = "zmk,combos";
 
@@ -150,15 +158,4 @@
             >;
         };
     };
-};
-
-/ {
-    behaviors {
-scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>,<&msc SCRL_UP>;
-            tap-ms = <20>;
-        };
-    }
 };
