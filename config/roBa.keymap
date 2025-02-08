@@ -21,40 +21,13 @@
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP> , <&msc SCRL_DOWN> ;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>;
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -83,6 +56,20 @@
             #binding-cells = <0>;
             bindings = <&kp HOME &kp LS(END) &kp J &kp I &kp Z &kp H &kp O &kp U &kp TAB &kp LS(D) &kp N &kp A &kp W &kp O &kp D &kp E &kp AT &kp N1 &kp N2 &kp N3 &kp ENTER>;
             label = "DEVQAPROD";
+        };
+
+        AdjustExcelWidth: AdjustExcelWidth {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp H &kp O &kp I>;
+            label = "ADJUSTEXCELWIDTH";
+        };
+
+        AdjustExcelHeight: AdjustExcelHeight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp H &kp O &kp A>;
+            label = "ADJUSTEXCELHEIGHT";
         };
     };
 
@@ -124,10 +111,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LG(V)                &kp LC(LS(LG(T)))                                  &PCPW   &wmadmin          &DevQAProd  &kp LC(MINUS)      &kp LC(EQUAL)
-&kp LC(A)   &kp LG(LS(S))    &kp DOWN_ARROW  &kp LC(LS(F1))           &kp LC(LS(M))      &kp C_VOLUME_UP        &lt 6 T  &trans  &trans            &trans      &trans             &trans
-&kp LC(Z)   &kp LS(LC(Z))    &kp LS(LG(C))   &kp LG(LS(RIGHT_ARROW))  &trans             &kp C_VOLUME_DOWN      &trans   &trans  &kp LC(LG(LEFT))  &trans      &kp LG(LC(RIGHT))  &trans
-&trans      &trans           &trans          &trans                   &trans             &trans                 &trans   &trans                                                   &trans
+&kp ESCAPE     &kp LC(LS(TAB))  &AdjustExcelHeight  &kp LG(V)       &kp LC(LS(LG(T)))                                  &PCPW   &wmadmin          &DevQAProd  &kp LC(MINUS)      &kp LC(EQUAL)
+&kp LC(A)      &kp LG(LS(S))    &AdjustExcelWidth   &kp LC(LS(F1))  &kp LC(LS(M))      &kp C_VOLUME_UP        &lt 6 T  &trans  &trans            &trans      &trans             &trans
+&kp LS(LG(C))  &trans           &trans              &kp LC(LS(V))   &trans             &kp C_VOLUME_DOWN      &trans   &trans  &kp LC(LG(LEFT))  &trans      &kp LG(LC(RIGHT))  &trans
+&trans         &trans           &trans              &trans          &trans             &trans                 &trans   &trans                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
