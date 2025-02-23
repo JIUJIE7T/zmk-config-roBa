@@ -112,7 +112,7 @@
         ARROW {
             bindings = <
 &kp ESCAPE     &kp LC(LS(TAB))  &AdjustExcelHeight  &kp LG(V)       &kp LC(LS(LG(T)))                                  &PCPW   &wmadmin          &DevQAProd  &kp LC(MINUS)      &kp LC(EQUAL)
-&kp LC(A)      &kp LG(LS(S))    &AdjustExcelWidth   &kp LC(LS(F1))  &kp LC(LS(M))      &kp C_VOLUME_UP        &lt 6 T  &trans  &trans            &trans      &trans             &trans
+&kp LC(A)      &kp LG(LS(S))    &AdjustExcelWidth   &kp LC(LS(F1))  &kp LC(LS(M))      &kp C_VOLUME_UP        &lt 6 T  &trans  &trans            &trans      &kp LG(MINUS)      &kp LG(EQUAL)
 &kp LS(LG(C))  &trans           &trans              &kp LC(LS(V))   &trans             &kp C_VOLUME_DOWN      &trans   &trans  &kp LC(LG(LEFT))  &trans      &kp LG(LC(RIGHT))  &trans
 &trans         &trans           &trans              &trans          &trans             &trans                 &trans   &trans                                                   &trans
             >;
